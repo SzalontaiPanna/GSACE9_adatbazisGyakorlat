@@ -1,0 +1,39 @@
+csomag  javapro ;
+
+import  java.io. * ;
+// java.util. * importálása;
+
+nyilvános  osztály  valami {
+
+	 public  void  hf1 () {  
+		 Húr sor;
+		 Húr [] szavak;
+		 int sorid =  0 ;
+		 próbáld {
+			 BufferedReader br =  new  BufferedReader ( új  InputStreamReader ( System . In));
+			 BufferedWriter bw =  null ;
+			 míg (sorid > =  0 ) {
+				 sor =    br . readLine ();
+				 if (sorid ==  0 ) {
+					 bw =  new  BufferedWriter ( új  FileWriter (sor));
+					 } else {
+						 bw . ír (sor);
+						 bw . új sor();
+						 }
+				 szorbid = szorid +  1 ;
+				 szavak = sor . split ( "  " );
+				 mert ( String sz : szavak) {
+					 Rendszer . ki . println (sz + " : " );
+					 if (sz . CompareTo ( " vége " ) ==  0 ) {
+						 br . Bezárás();
+						 szorid   =  - 1 ;
+						 }
+					 }
+				 }
+			 bw . Bezárás();
+			 Rendszer . ki . println ( " Ok " );
+			 } fogás ( kivétel ee) {
+				 ee . printStackTrace ();
+		 }
+	 } 
+} 
